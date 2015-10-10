@@ -1,7 +1,5 @@
-docker-tomcat
+tomcat8.0
 =============
-
-[![dockeri.co](http://dockeri.co/image/dordoka/tomcat)](https://registry.hub.docker.com/u/dordoka/tomcat/)
 
 Ubuntu 14.04, Oracle JDK 8 and Tomcat 8 based docker container.
 
@@ -15,9 +13,18 @@ Includes:
  - Git, wget, curl, build-essential
  
 ## Volumes
-Exports a volume on `/opt/tomcat/webapps`.
+Exports a volume on `/usr/local/tomcat/webapps`.
 You can mount the volume on run to a local directory containing your war file or exploded war directory.
 If you need the management app, remember to have a copy on your hosts volume mount point.
+
+##Environment
+The default Tomcat environment in the image for versions 7 and 8 is:
+
+	CATALINA_BASE:   /usr/local/tomcat
+	CATALINA_HOME:   /usr/local/tomcat
+	CATALINA_TMPDIR: /usr/local/tomcat/temp
+	JRE_HOME:        /usr
+	CLASSPATH:       /usr/local/tomcat/bin/bootstrap.jar:/usr/local/tomcat/bin/tomcat-juli.jar
 
 ## Ports
 Two ports are exposed:

@@ -4,8 +4,11 @@ MAINTAINER yangsai<yangsaipp@qq.com>
 ENV TOMCAT_VERSION 8.0.26
 # Add admin/admin user
 ADD tomcat-users.xml $CATALINA_HOME/conf/
+ADD setenv.sh $CATALINA_HOME/bin/
 
 EXPOSE 8080
 EXPOSE 8000
+EXPOSE 20
+EXPOSE 1898
 
-CMD ["catalina.sh","jpda","run"]
+CMD ["catalina.sh","run"]

@@ -6,5 +6,6 @@ ENV TOMCAT_VERSION 8.0.26
 ADD tomcat-users.xml $CATALINA_HOME/conf/
 
 EXPOSE 8080
+EXPOSE 8000
 
-CMD ["catalina.sh jpda start", "run"]
+CMD ["catalina.sh","jpda","run"]

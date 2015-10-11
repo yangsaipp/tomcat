@@ -41,7 +41,7 @@ Remember to map the ports to the docker host on run.
 You need docker v1.3+ installed. To get the container up and running, run:
  
 ```
-sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/webapps dordoka/tomcat
+sudo docker run -it --rm -p 8888:8080 -p 8000:8000 -v /c/Users/yangsai/workspace/WebSocketTest:/usr/local/tomcat/webapps/WebSocketTest yangsai/tomcat
 ```
 Remember to change `/opt/tomcat/webapps` to the directory where your app is stored.
 

@@ -8,7 +8,5 @@ ADD setenv.sh $CATALINA_HOME/bin/
 
 EXPOSE 8080
 EXPOSE 8000
-EXPOSE 20
-EXPOSE 1898
 
-CMD ["catalina.sh","run"]
+CMD ["catalina.sh","jpda", "run"]
